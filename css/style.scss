@@ -1,0 +1,55 @@
+@import 'modularscale';
+
+$modularscale: (
+  base: 1em,
+  ratio: 1.125
+);
+
+$font-stack: 'Open Sans Condensed', sans-serif;
+$header-font: 'Playfair Display', serif;
+$plot-font: 'Open Sans', sans-serif;
+$primary-color: #333;
+
+html {
+  font-size: ms(1);
+}
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+h1, h2, h3 {
+  font-family: $header-font; 
+}
+
+h1 {
+  font-size: ms(6);
+}
+
+h2 {
+  font-size: ms(5);
+}
+
+header {
+  background-color: $primary-color;
+  color: #FFFFFF;
+  padding: 12px;
+  h1 {
+	margin: 0;
+  }
+}
+
+#container {
+  padding: 12px;
+}
+
+/* VISUALIZATION STYLES */
+
+.highcharts-title {
+  font-family: $header-font;
+}
+
+.highcharts-subtitle, .highcharts-axis-title, .highcharts-legend-item {
+  font-family: $plot-font;
+}
