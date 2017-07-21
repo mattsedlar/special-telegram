@@ -10,6 +10,10 @@ $header-font: 'Playfair Display', serif;
 $plot-font: 'Open Sans', sans-serif;
 $primary-color: #333;
 
+html, body {
+    height: 100%;
+}
+
 html {
   font-size: ms(1);
 }
@@ -40,8 +44,28 @@ header {
   }
 }
 
+.container-fluid {
+    margin-bottom: -120px;
+    min-height: 100%;
+}
+
+.container-fluid:after {
+  content: "";
+  display: block;
+}
+
 #container {
   padding: 12px;
+}
+
+footer, .container-fluid:after {
+    height: 120px;
+}
+
+footer {
+    background-color: #EEEEEE;
+    padding: 12px 0;
+    width: 100%;
 }
 
 /* VISUALIZATION STYLES */
