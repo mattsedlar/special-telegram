@@ -2,20 +2,21 @@ html, body {
   height: 100%; }
 
 html {
-  font-size: 1.125em; }
+  font-size: 1.26563em; }
 
 body {
   font: 100% "Open Sans Condensed", sans-serif;
+  line-height: 1.42383em;
   color: #333; }
 
 h1, h2, h3 {
   font-family: "Playfair Display", serif; }
 
 h1 {
-  font-size: 2.0272865295em; }
+  font-size: 2.02729em; }
 
 h2 {
-  font-size: 1.8020324707em; }
+  font-size: 1.80203em; }
 
 header {
   background-color: #333;
@@ -35,6 +36,9 @@ header {
 #container {
   padding: 12px; }
 
+.inactive {
+  color: #cccccc; }
+
 footer, .container-fluid:after {
   height: 120px; }
 
@@ -49,5 +53,8 @@ footer {
 
 .highcharts-subtitle, .highcharts-axis-title, .highcharts-legend-item {
   font-family: "Open Sans", sans-serif; }
+
+#median-full-time-full-year {
+  height: 550px; }
 
 /*# sourceMappingURL=style.css.map */
