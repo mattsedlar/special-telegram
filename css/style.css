@@ -59,7 +59,8 @@ footer {
   font-family: "Open Sans", sans-serif; }
 
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
-  background: #444; }
+  background: #444;
+  border: 1px solid #c4c4c4; }
 
 /* VISUALIZATION STYLES */
 .highcharts-title {
