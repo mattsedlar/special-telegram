@@ -60,9 +60,9 @@
                 </div>
                 <hr/>
                 <small>LEARN MORE ABOUT</small>
-                <ul id="topics" class="nav nav-justified">
-                    <li class="nav-item"><h2><a class="nav-link active" href="#view/employment">Employment</a></h2></li>
-                    <li class="nav-item"><h2><a class="nav-link inactive" href="#view/workers">Workers</a></h2></li>
+                <ul id="topics" class="nav">
+                    <li class="nav-item"><h2><a class="nav-link inactive" href="#view/employment">Employment</a></h2></li>
+                    <!--li class="nav-item"><h2><a class="nav-link inactive" href="#view/workers">Workers</a></h2></li-->
                     <li class="nav-item"><h2><a class="nav-link inactive" href="#view/wages">Wages</a></h2></li>
                 </ul>
            </div>
@@ -105,18 +105,18 @@
             } else { $("ul#topics li").addClass('text-left'); }
         };
         
-        nav_align();
+        //nav_align();
         
         $("ul#topics li").click(function() {
             var index = $(this).parent().children().index(this);
             console.log(index);
-            $("ul#topics").prepend($("ul#topics li:eq("+index+")"));
-            $("ul#topics li:gt(0) a").css("color","#CCCCCC");
-            $("ul#topics li:eq(0) a").css("color","#23527c");
+            $("ul#topics").append($("ul#topics li:eq("+index+")"));
+            $("ul#topics li:lt(1) a").css("color","#CCCCCC");
+            $("ul#topics li:eq(1) a").css("color","#23527c");
             $("ul#topics li").removeClass (function (index, className) {
                 return (className.match (/(^|\s)text-\S+/g) || []).join(' ');
             });
-            nav_align();
+            //nav_align();
         });
           
         });

@@ -37,9 +37,9 @@ var AppRouter = new (Backbone.Router.extend({
         $('#workers').hide();
        
         $('#wages').fadeIn();
-        $("ul#topics").prepend($("ul#topics li:textEquals('Wages')"));
-        $("ul#topics li:gt(0) a").css("color","#CCCCCC");
-        $("ul#topics li:eq(0) a").css("color","#23527c");        
+        $("ul#topics").append($("ul#topics li:textEquals('Wages')"));
+        $("ul#topics li:lt(1) a").css("color","#CCCCCC");
+        $("ul#topics li:eq(1) a").css("color","#23527c");        
     },
     
     employment:function() {
@@ -54,9 +54,9 @@ var AppRouter = new (Backbone.Router.extend({
         $('#employment').hide();
         
         $('#workers').fadeIn();
-        $("ul#topics").prepend($("ul#topics li:textEquals('Workers')"));
-        $("ul#topics li:gt(0) a").css("color","#CCCCCC");
-        $("ul#topics li:eq(0) a").css("color","#23527c");         
+        $("ul#topics").append($("ul#topics li:textEquals('Workers')"));
+        $("ul#topics li:lt(1) a").css("color","#CCCCCC");
+        $("ul#topics li:eq(1) a").css("color","#23527c");         
         
     }
 
