@@ -8,7 +8,7 @@ $modularscale: (
 $font-stack: 'Open Sans', sans-serif;
 $header-font: 'Playfair Display', serif;
 $plot-font: 'Open Sans', sans-serif;
-$primary-color: #333;
+$primary-color: #444;
 
 html, body {
     height: 100%;
@@ -64,6 +64,12 @@ header {
     color: #cccccc;
 }
 
+ul {
+    li {
+        padding: 6px 0 6px 0;
+    }
+}
+
 footer, .container-fluid:after {
     height: 120px;
 }
@@ -72,6 +78,20 @@ footer {
     background-color: #EEEEEE;
     padding: 12px 0;
     width: 100%;
+}
+
+/* ACCORDION OVERRIDES */
+
+#more {
+    display: none;
+}
+
+.ui-widget {
+    font-family: $plot-font;   
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+ background: $primary-color;   
 }
 
 /* VISUALIZATION STYLES */

@@ -313,9 +313,11 @@
         }
     );
  
+ /* OCCUPATIONS WITHIN OVERALL HEALTH CARE INDUSTRIES */ 
+ 
 Highcharts.chart('occupations-all-industries',{
       title: {
-        text: "Occupations within overall health care industries",
+        text: "Occupations Within Overall Health Care Industries",
         margin: 20,
         align: "left",
         style: {

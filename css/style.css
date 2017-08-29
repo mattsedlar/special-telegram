@@ -7,7 +7,7 @@ html {
 body {
   font: 100% "Open Sans", sans-serif;
   line-height: 1.42383em;
-  color: #333; }
+  color: #444; }
 
 h1, h2, h3 {
   font-family: "Playfair Display", serif; }
@@ -19,7 +19,7 @@ h2 {
   font-size: 1.80203em; }
 
 header {
-  background-color: #333;
+  background-color: #444;
   color: #FFFFFF;
   padding: 12px; }
   header h1 {
@@ -40,6 +40,9 @@ header {
 .inactive {
   color: #cccccc; }
 
+ul li {
+  padding: 6px 0 6px 0; }
+
 footer, .container-fluid:after {
   height: 120px; }
 
@@ -47,6 +50,16 @@ footer {
   background-color: #EEEEEE;
   padding: 12px 0;
   width: 100%; }
+
+/* ACCORDION OVERRIDES */
+#more {
+  display: none; }
+
+.ui-widget {
+  font-family: "Open Sans", sans-serif; }
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+  background: #444; }
 
 /* VISUALIZATION STYLES */
 .highcharts-title {
