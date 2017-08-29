@@ -47,6 +47,9 @@ var AppRouter = new (Backbone.Router.extend({
         $('#workers').hide();
         
         $('#employment').fadeIn();
+        $("ul#topics").append($("ul#topics li:textEquals('Employment')"));
+        $("ul#topics li:lt(1) a").css("color","#CCCCCC");
+        $("ul#topics li:eq(1) a").css("color","#23527c");         
     },
     
     workers:function() {

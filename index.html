@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title></title>
       <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-      <link href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300|Playfair+Display" rel="stylesheet"> 
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display" rel="stylesheet"> 
       <link href="css/style.css" rel="stylesheet">
 
    </head>
@@ -98,25 +98,12 @@
         <script>
         $(document).ready(function() {
         
-        function nav_align() {
-            if ($(window).width() > 360) {
-                $("ul#topics li:eq(1)").addClass('text-center');
-                $("ul#topics li:eq(2)").addClass('text-right');
-            } else { $("ul#topics li").addClass('text-left'); }
-        };
-        
-        //nav_align();
-        
         $("ul#topics li").click(function() {
             var index = $(this).parent().children().index(this);
             console.log(index);
             $("ul#topics").append($("ul#topics li:eq("+index+")"));
             $("ul#topics li:lt(1) a").css("color","#CCCCCC");
             $("ul#topics li:eq(1) a").css("color","#23527c");
-            $("ul#topics li").removeClass (function (index, className) {
-                return (className.match (/(^|\s)text-\S+/g) || []).join(' ');
-            });
-            //nav_align();
         });
           
         });

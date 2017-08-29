@@ -1,6 +1,15 @@
+ $(function () {
+    Highcharts.setOptions({
+		lang: {
+			thousandsSep: ','
+		}
+	});
+ });
+ 
+ 
  /* REAL MEDIAN HOURLY WAGES OF FULL-TIME, FULL-YEAR HEALTHCARE WORKERS */
  
-Highcharts.chart('median-full-time-full-year', {
+ Highcharts.chart('median-full-time-full-year', {
         chart: { zoomType: 'xy' },
             title: {
             text: "Real Median Hourly Wages of Full-Time, Full-Year Healthcare Workers by Occupation Group",
