@@ -57,4 +57,13 @@ footer {
 #median-full-time-full-year {
   height: 550px; }
 
+/* MEDIA QUERIES */
+@media screen and (max-width: 360px) {
+  header {
+    text-align: center; }
+    header img {
+      padding-bottom: 6px; }
+    header h1 {
+      font-size: 1.42383em; } }
+
 /*# sourceMappingURL=style.css.map */

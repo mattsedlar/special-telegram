@@ -11,7 +11,7 @@ let ModuleView = Backbone.View.extend({
     }
 });
 
-let SiteCollectionView = Backbone.View.extend({
+let WageCollectionView = Backbone.View.extend({
     initialize: function () {
         this.render();
     },
@@ -19,13 +19,52 @@ let SiteCollectionView = Backbone.View.extend({
         this.collection.forEach(this.addOne, this);
     },
     addOne: function(module){
-            var moduleView = new ModuleView({
-                model: module
-            });
-            $("#wages").append(moduleView.el);
+        var moduleView = new ModuleView({
+            model: module
+        });
+        $("#wages").append(moduleView.el)
     }
 });
 
-var siteSectionsView = new SiteCollectionView({
-	collection: siteSections
+let WorkerCollectionView = Backbone.View.extend({
+    initialize: function () {
+        this.render();
+    },
+    render: function() {
+        this.collection.forEach(this.addOne, this);
+    },
+    addOne: function(module){
+        var moduleView = new ModuleView({
+            model: module
+        });
+        $("#workers").append(moduleView.el)
+    }
 });
+
+let EmploymentCollectionView = Backbone.View.extend({
+    initialize: function () {
+        this.render();
+    },
+    render: function() {
+        this.collection.forEach(this.addOne, this);
+    },
+    addOne: function(module){
+        var moduleView = new ModuleView({
+            model: module
+        });
+        $("#employment").append(moduleView.el)
+    }
+});
+
+
+let wageSectionsView = new WageCollectionView({
+	collection: wageSections
+});
+
+let workerSectionsView = new WorkerCollectionView({
+	collection: workerSections
+});
+
+let employmentSectionsView = new EmploymentCollectionView({
+	collection: employmentSections
+})
