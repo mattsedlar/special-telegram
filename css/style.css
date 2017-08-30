@@ -6,24 +6,24 @@ html {
 
 body {
   font: 100% "Open Sans", sans-serif;
-  line-height: 1.42383em;
+  line-height: 1.423828125em;
   color: #444; }
 
 h1, h2, h3 {
   font-family: "Playfair Display", serif; }
 
 h1 {
-  font-size: 2.02729em; }
+  font-size: 2.0272865295em; }
 
 h2 {
-  font-size: 1.80203em; }
+  font-size: 1.8020324707em; }
 
 header {
   background-color: #444;
   color: #FFFFFF;
   padding: 12px; }
   header h1 {
-    font-size: 2.56578em;
+    font-size: 2.565784514em;
     margin: 0; }
 
 .container-fluid {
@@ -52,9 +52,6 @@ footer {
   width: 100%; }
 
 /* ACCORDION OVERRIDES */
-#more {
-  display: none; }
-
 .ui-widget {
   font-family: "Open Sans", sans-serif; }
 
@@ -79,6 +76,6 @@ footer {
     header img {
       padding-bottom: 6px; }
     header h1 {
-      font-size: 1.42383em; } }
+      font-size: 1.423828125em; } }
 
 /*# sourceMappingURL=style.css.map */

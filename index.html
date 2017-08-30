@@ -51,7 +51,6 @@
                     <div class="col-md-6">
                         <p>The healthcare sector is one of the most important sources of jobs in the economy. Healthcare spending reached $3.2 trillion in 2015 or 17.8 percent of GDP (Centers for Medicare and Medicaid Services 2016) and accounted for 12.8 percent of private sector jobs (Bureau of Labor Statistics 2017b). It was the only industry that consistently added jobs during the Great Recession. In 2016, this sector added 381,000 private sector jobs, the most of any industry (Bureau of Labor Statistics 2017a). It is a particularly important source of employment for workers without a college degree, most of whom, as we document in this report, earn low wages.</p> 
                         <p>This report describes the changing patterns of jobs and wages for healthcare workers. We focus particularly on workers in hospitals and outpatient clinics, where major industry restructuring is occurring in response to financial pressures and regulatory and technological change. Several findings are noteworthy.</p>
-                        <p id="read-more" class="btn btn-primary"><strong>READ MORE</strong></p>
                         <div id="more">
                             <div id="accordion">
                             <h3>Healthcare Sector Employment Trends</h3> 
@@ -64,6 +63,21 @@
                                     <li>Healthcare professionals experienced the fastest job growth over the decade (at almost 50 percent), compared to other occupational groups, followed by strong growth (about 20 percent) among social service workers, medical technicians, and health aides and assistants (Table 2).</li>
 
                                     <li>The healthcare sector workforce became more demographically diverse over the decade. Jobs held by black workers grew by almost 25 percent, Hispanics by 57 percent, and Asian and other workers by 48 percent. Jobs among white workers, by contrast, grew at 11.5 percent — lower than the industry average. Men increased their workforce participation by 27 percent, but overall, women still held 78 percent of healthcare jobs in 2015 (Table 5).</li>
+                                </ul>
+                            </div>
+
+                            <h3>Hospital Restructuring and the Growth of Outpatient Care Jobs</h3>
+                            <div>
+                                <ul>
+                                <li>This report focuses primarily on the consolidation and restructuring of hospital-based healthcare systems. In response to regulatory reform and financial pressures, healthcare organizations are consolidating into larger healthcare systems while also decentralizing services to lower-cost outpatient (or ambulatory) care settings. Hospitals and outpatient clinics account for about 41 percent of all jobs in healthcare (Table 1).</li>
+
+                                <li>Hospitals remain by far the largest employer in this sector, but jobs in hospitals grew by 10 percent between 2005 and 2015 while those in outpatient care facilities grew by 60 percent (Table 1).</li> 
+
+                                <li>Healthcare professional jobs grew rapidly in both hospitals and outpatient care but at double the rate in outpatient care (60 percent versus 30 percent) (Tables 4a, b).</li>
+
+                                <li>For workers in nonprofessional occupations (social services, medical technicians, health aides and assistants, food and cleaning services), job growth in hospitals was relatively flat but grew by 61 percent in outpatient centers over the decade (Tables 4a, b).</li>
+
+                                <li>Job growth in outpatient facilities was disproportionately high for black workers (65 percent growth rate), Hispanic workers (103 percent), and Asian/others (82 percent), and within these groups, women’s job growth outpaced that of men (Table 5).</li>
                                 </ul>
                             </div>
                             </div>
@@ -122,14 +136,10 @@
             $("ul#topics li:eq(1) a").css("color","#23527c");
         });
         
-        $('#read-more').click(function() {
-            $(this).hide();
-            $('#more').fadeIn();
-        });
-        
+       
         $( "#accordion" ).accordion({
             collapsible: true,
-            heightStyle: "fill"
+            active: false
         });
           
         });
