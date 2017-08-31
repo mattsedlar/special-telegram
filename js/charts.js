@@ -315,148 +315,250 @@
  
  /* OCCUPATIONS WITHIN OVERALL HEALTH CARE INDUSTRIES */ 
  
+// Highcharts.chart('no-container',{
+//       title: {
+//         text: "Occupations Within Overall Health Care Industries",
+//         margin: 20,
+//         align: "left",
+//         style: {
+//           color: "#000000",
+//           useHTML: true
+//         }
+//       },
+//       yAxis: {
+//         title: {
+//           text: ""
+//         },
+//         type: "linear"
+//       },
+//       credits: {
+//         enabled: true,
+//         text: "Source: CEPR analysis of OES."
+//       },
+//       exporting: {
+//         enabled: false
+//       },
+//       plotOptions: {
+//         series: {
+//           turboThreshold: 0,
+//           showInLegend: true,
+//           marker: {
+//             enabled: true
+//           }
+//         },
+//         treemap: {
+//           layoutAlgorithm: "squarified"
+//         },
+//         bubble: {
+//           minSize: 5,
+//           maxSize: 25
+//         },
+//         scatter: {
+//           marker: {
+//             symbol: "circle"
+//           }
+//         }
+//       },
+//       annotationsOptions: {
+//         enabledButtons: false
+//       },
+//       tooltip: {
+//         delayForDisplay: 10,
+//         useHTML: true,
+//         headerFormat: "",
+//         pointFormat: "<strong>{point.name}<\/strong><br/>{point.variable}: {point.y:,.0f}<br/>Share of Overall Healthcare: {point.share}%"
+//       },
+//       series: [
+//         {
+//           name: "2005",
+//           data: [
+//             {
+//               variable: "2005",
+//               value: 5246630,
+//               share: 39.89,
+//               y: 5246630,
+//               name: "Overall Hospitals"
+//             },
+//             {
+//               variable: "2005",
+//               value: 465560,
+//               share: 3.54,
+//               y: 465560,
+//               name: "Overall Outpatient Care Centers"
+//             },
+//             {
+//               variable: "2005",
+//               value: 2079650,
+//               share: 15.81,
+//               y: 2079650,
+//               name: "Overall Offices of Physicians"
+//             },
+//             {
+//               variable: "2005",
+//               value: 806460,
+//               share: 6.13,
+//               y: 806460,
+//               name: "Overall Home Health Care Services"
+//             },
+//             {
+//               variable: "2005",
+//               value: 1576680,
+//               share: 11.99,
+//               y: 1576680,
+//               name: "Overall Nursing Care Facilities"
+//             }
+//           ],
+//           type: "bar"
+//         },
+//         {
+//           name: "2015",
+//           data: [
+//             {
+//               variable: "2015",
+//               value: 5755150,
+//               share: 36.35,
+//               y: 5755150,
+//               name: "Overall Hospitals"
+//             },
+//             {
+//               variable: "2015",
+//               value: 737410,
+//               share: 4.66,
+//               y: 737410,
+//               name: "Overall Outpatient Care Centers"
+//             },
+//             {
+//               variable: "2015",
+//               value: 2509450,
+//               share: 15.85,
+//               y: 2509450,
+//               name: "Overall Offices of Physicians"
+//             },
+//             {
+//               variable: "2015",
+//               value: 1298940,
+//               share: 8.2,
+//               y: 1298940,
+//               name: "Overall Home Health Care Services"
+//             },
+//             {
+//               variable: "2015",
+//               value: 1653320,
+//               share: 10.44,
+//               y: 1653320,
+//               name: "Overall Nursing Care Facilities"
+//             }
+//           ],
+//           type: "bar"
+//         }
+//       ],
+//       xAxis: {
+//         type: "category",
+//         title: {
+//           text: ""
+//         }
+//       },
+//       colors: ["#1F497D", "#538DD5", "#C4A797"]
+// });
+
 Highcharts.chart('occupations-all-industries',{
-      title: {
-        text: "Occupations Within Overall Health Care Industries",
-        margin: 20,
-        align: "left",
-        style: {
-          color: "#000000",
-          useHTML: true
+
+    title:{
+        text:'Employment Within Industries as a Share of Overall Healthcare'
+    },
+    legend:{
+        enabled:false
+    },
+    tooltip: {
+        formatter: function() {
+            return this.point.category + ': ' + this.point.name + ', ' + this.y + '%';
         }
-      },
-      yAxis: {
-        title: {
-          text: ""
+    },
+    xAxis: {
+        opposite:true,
+        lineColor:'#999',
+        categories:['2005','2015'],
+        title:{
+            text:''
         },
-        type: "linear"
-      },
-      credits: {
+        labels:{
+            style:{
+                fontWeight:'bold'
+            }
+        }
+    },
+    yAxis: {
+        gridLineWidth:1,
+        labels:{
+            enabled:true,
+        },
+        title:{
+            text:'',
+       }
+    },
+    credits: {
         enabled: true,
         text: "Source: CEPR analysis of OES."
-      },
-      exporting: {
-        enabled: false
-      },
-      plotOptions: {
-        series: {
-          turboThreshold: 0,
-          showInLegend: true,
-          marker: {
-            enabled: true
-          }
-        },
-        treemap: {
-          layoutAlgorithm: "squarified"
-        },
-        bubble: {
-          minSize: 5,
-          maxSize: 25
-        },
-        scatter: {
-          marker: {
-            symbol: "circle"
-          }
-        }
-      },
-      annotationsOptions: {
-        enabledButtons: false
-      },
-      tooltip: {
-        delayForDisplay: 10,
-        useHTML: true,
-        headerFormat: "",
-        pointFormat: "<strong>{point.name}<\/strong><br/>{point.variable}: {point.y:,.0f}<br/>Share of Overall Healthcare: {point.share}%"
-      },
-      series: [
-        {
-          name: "2005",
-          data: [
-            {
-              variable: "2005",
-              value: 5246630,
-              share: 39.89,
-              y: 5246630,
-              name: "Overall Hospitals"
+    },
+    plotOptions: {
+        line:{
+            lineWidth:2,
+            shadow:false,
+            color:'#1F497D',
+            marker:{
+                radius:3,
+                symbol: 'circle'
             },
-            {
-              variable: "2005",
-              value: 465560,
-              share: 3.54,
-              y: 465560,
-              name: "Overall Outpatient Care Centers"
-            },
-            {
-              variable: "2005",
-              value: 2079650,
-              share: 15.81,
-              y: 2079650,
-              name: "Overall Offices of Physicians"
-            },
-            {
-              variable: "2005",
-              value: 806460,
-              share: 6.13,
-              y: 806460,
-              name: "Overall Home Health Care Services"
-            },
-            {
-              variable: "2005",
-              value: 1576680,
-              share: 11.99,
-              y: 1576680,
-              name: "Overall Nursing Care Facilities"
+            dataLabels:{
+                enabled:true,
+                align:'left',
+                x:12,
+                y:10,
+                formatter:function(){
+                    if(this.x == 2015){
+                        return this.series.name;
+                    }
+                }
             }
-          ],
-          type: "bar"
         },
-        {
-          name: "2015",
-          data: [
-            {
-              variable: "2015",
-              value: 5755150,
-              share: 36.35,
-              y: 5755150,
-              name: "Overall Hospitals"
+        scatter:{
+            shadow:false,
+            color:'#666',
+            marker:{
+                radius:3
             },
-            {
-              variable: "2015",
-              value: 737410,
-              share: 4.66,
-              y: 737410,
-              name: "Overall Outpatient Care Centers"
-            },
-            {
-              variable: "2015",
-              value: 2509450,
-              share: 15.85,
-              y: 2509450,
-              name: "Overall Offices of Physicians"
-            },
-            {
-              variable: "2015",
-              value: 1298940,
-              share: 8.2,
-              y: 1298940,
-              name: "Overall Home Health Care Services"
-            },
-            {
-              variable: "2015",
-              value: 1653320,
-              share: 10.44,
-              y: 1653320,
-              name: "Overall Nursing Care Facilities"
+            dataLabels:{
+                enabled:true,
+                align:'right',
+                x:-12,
+                y:10,
+                formatter:function(){
+                    return this.point.name;
+                }
             }
-          ],
-          type: "bar"
         }
-      ],
-      xAxis: {
-        type: "category",
-        title: {
-          text: ""
-        }
-      },
-      colors: ["#1F497D", "#538DD5", "#C4A797"]
-});
+    },
+    series: [{
+        name:'Hospitals',
+        data: [39.89,36.35]
+    },{
+        name:'Outpatient Care Centers',
+        data: [3.54,4.6]
+    },{
+         name:'Offices of Physicians',
+         data: [15.81,15.85]
+     },{
+         name:'Home Health Care Services',
+         data: [6.13,8.2]
+     },{
+         name:'Nursing Care Facilities',
+         data: [11.19,10.44]
+     },{
+         type:'scatter',
+         data: [{'x':0,'y':39.89,'name':'Hospitals'},
+             {'x':0,'y':3.54,'name':'Outpatient Care Centers'},
+             {'x':0,'y':15.81,'name':'Offices of Physicians'},
+             {'x':0,'y':6.13,'name':'Home Health Care Services'},
+             {'x':0,'y':11.19,'name':'Nursing Care Facilities'}]
+      }]
+  });
