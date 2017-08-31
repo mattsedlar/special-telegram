@@ -313,165 +313,27 @@
         }
     );
  
- /* OCCUPATIONS WITHIN OVERALL HEALTH CARE INDUSTRIES */ 
- 
-// Highcharts.chart('no-container',{
-//       title: {
-//         text: "Occupations Within Overall Health Care Industries",
-//         margin: 20,
-//         align: "left",
-//         style: {
-//           color: "#000000",
-//           useHTML: true
-//         }
-//       },
-//       yAxis: {
-//         title: {
-//           text: ""
-//         },
-//         type: "linear"
-//       },
-//       credits: {
-//         enabled: true,
-//         text: "Source: CEPR analysis of OES."
-//       },
-//       exporting: {
-//         enabled: false
-//       },
-//       plotOptions: {
-//         series: {
-//           turboThreshold: 0,
-//           showInLegend: true,
-//           marker: {
-//             enabled: true
-//           }
-//         },
-//         treemap: {
-//           layoutAlgorithm: "squarified"
-//         },
-//         bubble: {
-//           minSize: 5,
-//           maxSize: 25
-//         },
-//         scatter: {
-//           marker: {
-//             symbol: "circle"
-//           }
-//         }
-//       },
-//       annotationsOptions: {
-//         enabledButtons: false
-//       },
-//       tooltip: {
-//         delayForDisplay: 10,
-//         useHTML: true,
-//         headerFormat: "",
-//         pointFormat: "<strong>{point.name}<\/strong><br/>{point.variable}: {point.y:,.0f}<br/>Share of Overall Healthcare: {point.share}%"
-//       },
-//       series: [
-//         {
-//           name: "2005",
-//           data: [
-//             {
-//               variable: "2005",
-//               value: 5246630,
-//               share: 39.89,
-//               y: 5246630,
-//               name: "Overall Hospitals"
-//             },
-//             {
-//               variable: "2005",
-//               value: 465560,
-//               share: 3.54,
-//               y: 465560,
-//               name: "Overall Outpatient Care Centers"
-//             },
-//             {
-//               variable: "2005",
-//               value: 2079650,
-//               share: 15.81,
-//               y: 2079650,
-//               name: "Overall Offices of Physicians"
-//             },
-//             {
-//               variable: "2005",
-//               value: 806460,
-//               share: 6.13,
-//               y: 806460,
-//               name: "Overall Home Health Care Services"
-//             },
-//             {
-//               variable: "2005",
-//               value: 1576680,
-//               share: 11.99,
-//               y: 1576680,
-//               name: "Overall Nursing Care Facilities"
-//             }
-//           ],
-//           type: "bar"
-//         },
-//         {
-//           name: "2015",
-//           data: [
-//             {
-//               variable: "2015",
-//               value: 5755150,
-//               share: 36.35,
-//               y: 5755150,
-//               name: "Overall Hospitals"
-//             },
-//             {
-//               variable: "2015",
-//               value: 737410,
-//               share: 4.66,
-//               y: 737410,
-//               name: "Overall Outpatient Care Centers"
-//             },
-//             {
-//               variable: "2015",
-//               value: 2509450,
-//               share: 15.85,
-//               y: 2509450,
-//               name: "Overall Offices of Physicians"
-//             },
-//             {
-//               variable: "2015",
-//               value: 1298940,
-//               share: 8.2,
-//               y: 1298940,
-//               name: "Overall Home Health Care Services"
-//             },
-//             {
-//               variable: "2015",
-//               value: 1653320,
-//               share: 10.44,
-//               y: 1653320,
-//               name: "Overall Nursing Care Facilities"
-//             }
-//           ],
-//           type: "bar"
-//         }
-//       ],
-//       xAxis: {
-//         type: "category",
-//         title: {
-//           text: ""
-//         }
-//       },
-//       colors: ["#1F497D", "#538DD5", "#C4A797"]
-// });
+ /* OCCUPATIONS WITHIN OVERALL HEALTH CARE INDUSTRY */ 
+
 
 Highcharts.chart('occupations-all-industries',{
+    
+    chart: {
+        marginBottom: 24
+    },
 
     title:{
-        text:'Employment Within Industries as a Share of Overall Healthcare'
+        text:'Employment by Segments as a Share of Overall Healthcare Jobs'
     },
     legend:{
         enabled:false
     },
     tooltip: {
         formatter: function() {
-            return this.point.category + ': ' + this.point.name + ', ' + this.y + '%';
+            if(this.x == 2005) { return this.x + ': ' + this.point.name + ', ' + this.y + '%' } 
+            else {
+            return this.x + ': ' + this.series.name + ', ' + this.y + '%'
+            }
         }
     },
     xAxis: {
@@ -491,6 +353,7 @@ Highcharts.chart('occupations-all-industries',{
         gridLineWidth:1,
         labels:{
             enabled:true,
+            format: '{value}%'
         },
         title:{
             text:'',
@@ -498,7 +361,13 @@ Highcharts.chart('occupations-all-industries',{
     },
     credits: {
         enabled: true,
-        text: "Source: CEPR analysis of OES."
+        text: "Source: CEPR analysis of OES.",
+        position: { 
+            y: 0
+        },
+        style: { 
+            fontSize: "11px", 
+        }
     },
     plotOptions: {
         line:{
