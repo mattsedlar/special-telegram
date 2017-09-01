@@ -32,7 +32,7 @@
             enabled: false
         },
         exporting: {
-            enabled: false
+            enabled: true
         },
         plotOptions: {
             series: {
@@ -350,7 +350,7 @@ Highcharts.chart('occupations-all-industries',{
         }
     },
     yAxis: {
-        gridLineWidth:1,
+        gridLineWidth:0.75,
         labels:{
             enabled:true,
             format: '{value}%'
@@ -369,6 +369,9 @@ Highcharts.chart('occupations-all-industries',{
             fontSize: "11px", 
         }
     },
+    exporting: {
+        enabled: true
+    },    
     plotOptions: {
         line:{
             lineWidth:2,
@@ -382,11 +385,14 @@ Highcharts.chart('occupations-all-industries',{
                 enabled:true,
                 align:'left',
                 x:12,
-                y:10,
+                y:8,
                 formatter:function(){
                     if(this.x == 2015){
                         return this.series.name;
                     }
+                },
+                style: { 
+                    fontSize: "8.5px", 
                 }
             }
         },
@@ -400,28 +406,38 @@ Highcharts.chart('occupations-all-industries',{
                 enabled:true,
                 align:'right',
                 x:-12,
-                y:10,
+                y:8,
                 formatter:function(){
                     return this.point.name;
+                },
+                style: { 
+                    fontSize: "8.5px", 
                 }
             }
         }
     },
     series: [{
         name:'Hospitals',
+//         data: [100,-9.69]
         data: [39.89,36.35]
     },{
         name:'Outpatient Care Centers',
+//         data: [100,58.39]
         data: [3.54,4.6]
     },{
          name:'Offices of Physicians',
-         data: [15.81,15.85]
+//          data: [100,20.66]
+        data: [15.81,15.85]
      },{
          name:'Home Health Care Services',
-         data: [6.13,8.2]
+//          data: [100,61.06]
+        data: [6.13,8.2]
+         
      },{
          name:'Nursing Care Facilities',
+//          data: [100, -4.86]
          data: [11.19,10.44]
+         
      },{
          type:'scatter',
          data: [{'x':0,'y':39.89,'name':'Hospitals'},
