@@ -392,7 +392,7 @@ Highcharts.chart('occupations-all-industries',{
                     }
                 },
                 style: { 
-                    fontSize: "8.5px", 
+                    fontSize: "7px", 
                 }
             }
         },
@@ -411,39 +411,36 @@ Highcharts.chart('occupations-all-industries',{
                     return this.point.name;
                 },
                 style: { 
-                    fontSize: "8.5px", 
+                    fontSize: "7px", 
                 }
             }
         }
     },
     series: [{
         name:'Hospitals',
-//         data: [100,-9.69]
         data: [39.89,36.35]
     },{
         name:'Outpatient Care Centers',
-//         data: [100,58.39]
-        data: [3.54,4.6]
+         data: [3.54,4.6]
     },{
          name:'Offices of Physicians',
-//          data: [100,20.66]
-        data: [15.81,15.85]
+         data: [15.81,15.85]
      },{
          name:'Home Health Care Services',
-//          data: [100,61.06]
-        data: [6.13,8.2]
+         data: [6.13,8.2]
          
      },{
          name:'Nursing Care Facilities',
-//          data: [100, -4.86]
          data: [11.19,10.44]
          
-     },{
+     },
+     {
          type:'scatter',
          data: [{'x':0,'y':39.89,'name':'Hospitals'},
              {'x':0,'y':3.54,'name':'Outpatient Care Centers'},
              {'x':0,'y':15.81,'name':'Offices of Physicians'},
              {'x':0,'y':6.13,'name':'Home Health Care Services'},
              {'x':0,'y':11.19,'name':'Nursing Care Facilities'}]
-      }]
+      }        
+    ]
   });

@@ -71,11 +71,21 @@ header {
 ul {
     li {
         padding: 6px 0 6px 0;
+        a {
+            color: #23527c;
+            &:hover {
+                text-decoration: none;
+            }
+        }
     }
 }
 
+#more {
+    margin: 12px 0;
+}
+
 footer, .container-fluid:after {
-    height: 120px;
+    height: 150px;
 }
 
 footer {
@@ -90,6 +100,10 @@ footer {
 
 .ui-widget {
     font-family: $plot-font;   
+}
+
+.ui-widget-content a {
+    color: #23527c;
 }
 
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
