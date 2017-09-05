@@ -341,7 +341,7 @@ Highcharts.chart('occupations-all-industries',{
         }
       },
       exporting: {
-        enabled: false
+        enabled: true
       },
       plotOptions: {
         series: {
