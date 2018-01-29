@@ -9,7 +9,7 @@ body {
   line-height: 1.423828125em;
   color: #444; }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: "Playfair Display", serif; }
 
 h1 {
@@ -17,6 +17,14 @@ h1 {
 
 h2 {
   font-size: 1.8020324707em; }
+
+h3 {
+  font-size: 1.6018066406em;
+  line-height: 1.265625em; }
+
+h4 {
+  font-size: 1.423828125em;
+  line-height: 1.265625em; }
 
 header {
   background-color: #444;
@@ -73,6 +81,17 @@ footer {
   background: #444;
   border: 1px solid #c4c4c4; }
 
+/* ARTICLE STYLES */
+.articles {
+  height: 420px; }
+  .articles img {
+    overflow: hidden; }
+
+.article {
+  height: 100%;
+  border-top: 0.25px solid lightgrey;
+  border-radius: 15px; }
+
 /* VISUALIZATION STYLES */
 .highcharts-title {
   font-family: "Playfair Display", serif; }
@@ -82,6 +101,12 @@ footer {
 
 #median-full-time-full-year {
   height: 550px; }
+
+/* SOCIAL */
+#social {
+  margin-top: 12px; }
+  #social #fb {
+    padding: 0 11px; }
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 991px) {

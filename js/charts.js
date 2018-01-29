@@ -6,10 +6,9 @@
 	});
  });
  
+/* WAGES */
  
- /* REAL MEDIAN HOURLY WAGES OF FULL-TIME, FULL-YEAR HEALTHCARE WORKERS */
- 
- Highcharts.chart('median-full-time-full-year', {
+Highcharts.chart('median-full-time-full-year', {
         chart: { zoomType: 'xy' },
             title: {
             text: "Real Median Hourly Wages of Full-Time, Full-Year Healthcare Workers by Occupation Group",
@@ -29,7 +28,11 @@
             }
         },
         credits: {
-            enabled: false
+            enabled: true,
+            text: "Source: CEPR analysis of OES.",
+            style: {
+                fontSize: 12
+            }
         },
         exporting: {
             enabled: true
@@ -310,11 +313,508 @@
             }
         ],
         colors: ["#1F497D", "#538DD5", "#C4A797"]
-        }
-    );
+});
  
- /* OCCUPATIONS WITHIN OVERALL HEALTH CARE INDUSTRY */ 
+Highcharts.chart('median-full-time-full-year-by-race',{
+      title: {
+        text: "Change in Real Median Hourly Wages of Full-Time, Full-Year Healthcare Workers",
+        margin: 20,
+        align: "left",
+        style: {
+          color: "#000000",
+          useHTML: true
+        }
+      },
+      yAxis: {
+        title: {
+          text: null
+        },
+        labels: {
+          format: "{value}%"
+        }
+      },
+      credits: {
+        enabled: true,
+        text: "Source: CEPR analysis of the ACS.",
+        position: {
+          align: "right",
+          x: 0
+        },
+        style: {
+          fontSize: 12
+        }
+      },
+      exporting: {
+        enabled: true
+      },
+      plotOptions: {
+        series: {
+          turboThreshold: 0
+        },
+        treemap: {
+          layoutAlgorithm: "squarified"
+        },
+        bubble: {
+          minSize: 5,
+          maxSize: 25
+        }
+      },
+      annotationsOptions: {
+        enabledButtons: false
+      },
+      tooltip: {
+        delayForDisplay: 10
+      },
+      xAxis: {
+        categories: ["Overall Healthcare", "Hospitals", "Outpatient Care Center"]
+      },
+      series: [
+        {
+          name: "Asian/Other",
+          data: [
+            {
+              category: "Overall Healthcare",
+              year: null,
+              value: 4.1,
+              y: 4.1
+            },
+            {
+              category: "Hospitals",
+              year: null,
+              value: 3.3,
+              y: 3.3
+            },
+            {
+              category: "Outpatient Care Center",
+              year: null,
+              value: 3.2,
+              y: 3.2
+            }
+          ],
+          type: "column"
+        },
+        {
+          name: "Black",
+          data: [
+            {
+              category: "Overall Healthcare",
+              year: null,
+              value: -0.7,
+              y: -0.7
+            },
+            {
+              category: "Hospitals",
+              year: null,
+              value: 2.2,
+              y: 2.2
+            },
+            {
+              category: "Outpatient Care Center",
+              year: null,
+              value: -3.7,
+              y: -3.7
+            }
+          ],
+          type: "column"
+        },
+        {
+          name: "Hispanic",
+          data: [
+            {
+              category: "Overall Healthcare",
+              year: null,
+              value: -1,
+              y: -1
+            },
+            {
+              category: "Hospitals",
+              year: null,
+              value: 6.5,
+              y: 6.5
+            },
+            {
+              category: "Outpatient Care Center",
+              year: null,
+              value: -5.6,
+              y: -5.6
+            }
+          ],
+          type: "column"
+        },
+        {
+          name: "White",
+          data: [
+            {
+              category: "Overall Healthcare",
+              year: null,
+              value: 2,
+              y: 2
+            },
+            {
+              category: "Hospitals",
+              year: null,
+              value: 4.8,
+              y: 4.8
+            },
+            {
+              category: "Outpatient Care Center",
+              year: null,
+              value: -0.7,
+              y: -0.7
+            }
+          ],
+          type: "column"
+        }
+      ],
+      subtitle: {
+        text: "<em>By Race, 2005 to 2015<\/em>",
+        align: "left",
+        style: {
+          color: "#000000",
+          useHTML: true
+        }
+      },
+      colors: ["#1F497D", "#C5D9F1", "#538DD5", "#C4BD97", "#948A54"],
+      legend: {
+        margin: 3
+      }
+});
 
+Highcharts.chart('median-full-time-full-year-by-race-occupation',{
+      title: {
+        text: "Change in Real Median Hourly Wages of Full-Time, Full-Year Healthcare Workers",
+        margin: 10,
+        align: "left",
+        style: {
+          color: "#000000",
+          useHTML: true
+        }
+      },
+      yAxis: {
+        title: {
+          text: null
+        },
+        labels: {
+          format: "{value}%"
+        }
+      },
+      credits: {
+        enabled: true,
+        text: "Source: CEPR analysis of the ACS.",
+        position: {
+          align: "right",
+          x: 0
+        },
+        style: {
+          fontSize: 12
+        }
+      },
+      exporting: {
+        enabled: true
+      },
+      plotOptions: {
+        series: {
+          turboThreshold: 0
+        },
+        treemap: {
+          layoutAlgorithm: "squarified"
+        },
+        bubble: {
+          minSize: 5,
+          maxSize: 25
+        }
+      },
+      annotationsOptions: {
+        enabledButtons: false
+      },
+      tooltip: {
+        delayForDisplay: 10
+      },
+      xAxis: {
+        categories: [
+          {
+            name: "Overall Healthcare",
+            categories: ["Healthcare Professionals", "Medical Technicians", "Health Aides and Assistants"]
+          },
+          {
+            name: "Hospitals",
+            categories: ["Healthcare Professionals", "Medical Technicians", "Health Aides and Assistants"]
+          },
+          {
+            name: "Outpatient Care Centers",
+            categories: ["Healthcare Professionals", "Medical Technicians", "Health Aides and Assistants"]
+          }
+        ],
+        labels: {
+          align: "center",
+          x: -2,
+          autoRotation: 0,
+          style: {
+            fontSize: "9px"
+          }
+        }
+      },
+      subtitle: {
+        text: "<em>By Race and Occupation, 2005 to 2015<\/em>",
+        align: "left",
+        style: {
+          color: "#000000",
+          useHTML: true
+        }
+      },
+      series: [
+        {
+          group: "White",
+          data: [
+            {
+              profession: "Healthcare Professionals",
+              category: "Overall Healthcare",
+              value: 1.9,
+              y: 1.9
+            },
+            {
+              profession: "Medical Technicians",
+              category: "Overall Healthcare",
+              value: -5.7,
+              y: -5.7
+            },
+            {
+              profession: "Health Aides and Assistants",
+              category: "Overall Healthcare",
+              value: -0.7,
+              y: -0.7
+            },
+            {
+              profession: "Healthcare Professionals",
+              category: "Hospitals",
+              value: 1.9,
+              y: 1.9
+            },
+            {
+              profession: "Medical Technicians",
+              category: "Hospitals",
+              value: -1.2,
+              y: -1.2
+            },
+            {
+              profession: "Health Aides and Assistants",
+              category: "Hospitals",
+              value: -4.6,
+              y: -4.6
+            },
+            {
+              profession: "Healthcare Professionals",
+              category: "Outpatient Care Center",
+              value: 3.2,
+              y: 3.2
+            },
+            {
+              profession: "Medical Technicians",
+              category: "Outpatient Care Center",
+              value: -1,
+              y: -1
+            },
+            {
+              profession: "Health Aides and Assistants",
+              category: "Outpatient Care Center",
+              value: 2.4,
+              y: 2.4
+            }
+          ],
+          type: "column",
+          name: "White"
+        },
+        {
+          group: "Black",
+          data: [
+            {
+              profession: "Healthcare Professionals",
+              category: "Overall Healthcare",
+              value: -0.9,
+              y: -0.9
+            },
+            {
+              profession: "Medical Technicians",
+              category: "Overall Healthcare",
+              value: 0.2,
+              y: 0.2
+            },
+            {
+              profession: "Health Aides and Assistants",
+              category: "Overall Healthcare",
+              value: -4,
+              y: -4
+            },
+            {
+              profession: "Healthcare Professionals",
+              category: "Hospitals",
+              value: 6.2,
+              y: 6.2
+            },
+            {
+              profession: "Medical Technicians",
+              category: "Hospitals",
+              value: -3.3,
+              y: -3.3
+            },
+            {
+              profession: "Health Aides and Assistants",
+              category: "Hospitals",
+              value: -1,
+              y: -1
+            },
+            {
+              profession: "Healthcare Professionals",
+              category: "Outpatient Care Center",
+              value: -0.9,
+              y: -0.9
+            },
+            {
+              profession: "Medical Technicians",
+              category: "Outpatient Care Center",
+              value: -2.7,
+              y: -2.7
+            },
+            {
+              profession: "Health Aides and Assistants",
+              category: "Outpatient Care Center",
+              value: 0.4,
+              y: 0.4
+            }
+          ],
+          type: "column",
+          name: "Black"
+        },
+        {
+          group: "Hispanic",
+          data: [
+            {
+              profession: "Healthcare Professionals",
+              category: "Overall Healthcare",
+              value: -3,
+              y: -3
+            },
+            {
+              profession: "Medical Technicians",
+              category: "Overall Healthcare",
+              value: -0.8,
+              y: -0.8
+            },
+            {
+              profession: "Health Aides and Assistants",
+              category: "Overall Healthcare",
+              value: -2.4,
+              y: -2.4
+            },
+            {
+              profession: "Healthcare Professionals",
+              category: "Hospitals",
+              value: -0.1,
+              y: -0.1
+            },
+            {
+              profession: "Medical Technicians",
+              category: "Hospitals",
+              value: 5,
+              y: 5
+            },
+            {
+              profession: "Health Aides and Assistants",
+              category: "Hospitals",
+              value: -3,
+              y: -3
+            },
+            {
+              profession: "Healthcare Professionals",
+              category: "Outpatient Care Center",
+              value: -22.4,
+              y: -22.4
+            },
+            {
+              profession: "Medical Technicians",
+              category: "Outpatient Care Center",
+              value: -6.4,
+              y: -6.4
+            },
+            {
+              profession: "Health Aides and Assistants",
+              category: "Outpatient Care Center",
+              value: 1.3,
+              y: 1.3
+            }
+          ],
+          type: "column",
+          name: "Hispanic"
+        },
+        {
+          group: "Asian/Other",
+          data: [
+            {
+              profession: "Healthcare Professionals",
+              category: "Overall Healthcare",
+              value: -1,
+              y: -1
+            },
+            {
+              profession: "Medical Technicians",
+              category: "Overall Healthcare",
+              value: -7.1,
+              y: -7.1
+            },
+            {
+              profession: "Health Aides and Assistants",
+              category: "Overall Healthcare",
+              value: -2,
+              y: -2
+            },
+            {
+              profession: "Healthcare Professionals",
+              category: "Hospitals",
+              value: 1.6,
+              y: 1.6
+            },
+            {
+              profession: "Medical Technicians",
+              category: "Hospitals",
+              value: -5.7,
+              y: -5.7
+            },
+            {
+              profession: "Health Aides and Assistants",
+              category: "Hospitals",
+              value: 0.2,
+              y: 0.2
+            },
+            {
+              profession: "Healthcare Professionals",
+              category: "Outpatient Care Center",
+              value: -10.4,
+              y: -10.4
+            },
+            {
+              profession: "Medical Technicians",
+              category: "Outpatient Care Center",
+              value: -12.8,
+              y: -12.8
+            },
+            {
+              profession: "Health Aides and Assistants",
+              category: "Outpatient Care Center",
+              value: 3.9,
+              y: 3.9
+            }
+          ],
+          type: "column",
+          name: "Asian/Other"
+        }
+      ],
+      colors: ["#1F497D", "#C5D9F1", "#538DD5", "#C4BD97", "#948A54"],
+      legend: {
+        margin: 0
+      }
+});
+
+/* EMPLOYMENT */ 
 
 Highcharts.chart('occupations-all-industries',{
 
@@ -798,4 +1298,520 @@ Highcharts.chart('occupations-all-industries',{
       },
       colors: ["#1F497D", "#C5D9F1", "#538DD5", "#C4BD97", "#948A54"]
     
+});
+
+Highcharts.chart('women-ethnicity-employment',{
+      title: {
+        text: "Employment Shares of Full-Time, Full-Year Healthcare Workers",
+        margin: 20,
+        align: "left",
+        style: {
+          color: "#000000",
+          useHTML: true
+        }
+      },
+      yAxis: {
+        title: {
+          text: null
+        }
+      },
+      credits: {
+        enabled: true,
+        text: "Source and notes: CEPR analysis of the ACS.",
+        position: {
+          align: "left",
+          x: 10
+        },
+        style: {
+          fontSize: 12
+        }
+      },
+      exporting: {
+        enabled: true
+      },
+      plotOptions: {
+        series: {
+          turboThreshold: 0,
+          stacking: "normal"
+        },
+        treemap: {
+          layoutAlgorithm: "squarified"
+        },
+        bubble: {
+          minSize: 5,
+          maxSize: 25
+        }
+      },
+      annotationsOptions: {
+        enabledButtons: false
+      },
+      tooltip: {
+        delayForDisplay: 10,
+        pointFormat: "<span style=\"color:{point.color}\">●<\/span> {series.name} Women: <b>{point.y:,.2f}%<\/b>"
+      },
+      xAxis: {
+        categories: [
+          {
+            name: "Overall Healthcare",
+            categories: ["2005", "2015"]
+          },
+          {
+            name: "Hospitals",
+            categories: ["2005", "2015"]
+          },
+          {
+            name: "Outpatient Care Centers",
+            categories: ["2005", "2015"]
+          }
+        ],
+        labels: {
+          align: "center",
+          x: -2,
+          autoRotation: 0,
+          style: {
+            fontSize: "9px"
+          }
+        }
+      },
+      series: [
+        {
+          group: "Asian/Other",
+          data: [
+            {
+              sex: "Women",
+              variable: "overall.health.care.2005",
+              value: 5,
+              category: "2005",
+              type: "Overall Healthcare",
+              y: 5
+            },
+            {
+              sex: "Women",
+              variable: "overall.health.care.2015",
+              value: 6.1,
+              category: "2015",
+              type: "Overall Healthcare",
+              y: 6.1
+            },
+            {
+              sex: "Women",
+              variable: "hospitals.2005",
+              value: 5.7,
+              category: "2005",
+              type: "Hospitals",
+              y: 5.7
+            },
+            {
+              sex: "Women",
+              variable: "hospitals.2015",
+              value: 6.8,
+              category: "2015",
+              type: "Hospitals",
+              y: 6.8
+            },
+            {
+              sex: "Women",
+              variable: "outpatient.care.center.2005",
+              value: 4.6,
+              category: "2005",
+              type: "Outpatient Care Center",
+              y: 4.6
+            },
+            {
+              sex: "Women",
+              variable: "outpatient.care.center.2015",
+              value: 5.8,
+              category: "2015",
+              type: "Outpatient Care Center",
+              y: 5.8
+            }
+          ],
+          type: "column",
+          name: "Asian/Other",
+          stack: 0
+        },
+        {
+          group: "Black",
+          data: [
+            {
+              sex: "Women",
+              variable: "overall.health.care.2005",
+              value: 13.2,
+              category: "2005",
+              type: "Overall Healthcare",
+              y: 13.2
+            },
+            {
+              sex: "Women",
+              variable: "overall.health.care.2015",
+              value: 13.4,
+              category: "2015",
+              type: "Overall Healthcare",
+              y: 13.4
+            },
+            {
+              sex: "Women",
+              variable: "hospitals.2005",
+              value: 12.3,
+              category: "2005",
+              type: "Hospitals",
+              y: 12.3
+            },
+            {
+              sex: "Women",
+              variable: "hospitals.2015",
+              value: 11.7,
+              category: "2015",
+              type: "Hospitals",
+              y: 11.7
+            },
+            {
+              sex: "Women",
+              variable: "outpatient.care.center.2005",
+              value: 9.9,
+              category: "2005",
+              type: "Outpatient Care Center",
+              y: 9.9
+            },
+            {
+              sex: "Women",
+              variable: "outpatient.care.center.2015",
+              value: 10.5,
+              category: "2015",
+              type: "Outpatient Care Center",
+              y: 10.5
+            }
+          ],
+          type: "column",
+          name: "Black",
+          stack: 0
+        },
+        {
+          group: "Hispanic",
+          data: [
+            {
+              sex: "Women",
+              variable: "overall.health.care.2005",
+              value: 7.1,
+              category: "2005",
+              type: "Overall Healthcare",
+              y: 7.1
+            },
+            {
+              sex: "Women",
+              variable: "overall.health.care.2015",
+              value: 9.4,
+              category: "2015",
+              type: "Overall Healthcare",
+              y: 9.4
+            },
+            {
+              sex: "Women",
+              variable: "hospitals.2005",
+              value: 5.8,
+              category: "2005",
+              type: "Hospitals",
+              y: 5.8
+            },
+            {
+              sex: "Women",
+              variable: "hospitals.2015",
+              value: 7.4,
+              category: "2015",
+              type: "Hospitals",
+              y: 7.4
+            },
+            {
+              sex: "Women",
+              variable: "outpatient.care.center.2005",
+              value: 8.7,
+              category: "2005",
+              type: "Outpatient Care Center",
+              y: 8.7
+            },
+            {
+              sex: "Women",
+              variable: "outpatient.care.center.2015",
+              value: 11.5,
+              category: "2015",
+              type: "Outpatient Care Center",
+              y: 11.5
+            }
+          ],
+          type: "column",
+          name: "Hispanic",
+          stack: 0
+        },
+        {
+          group: "White",
+          data: [
+            {
+              sex: "Women",
+              variable: "overall.health.care.2005",
+              value: 53.5,
+              category: "2005",
+              type: "Overall Healthcare",
+              y: 53.5
+            },
+            {
+              sex: "Women",
+              variable: "overall.health.care.2015",
+              value: 48.9,
+              category: "2015",
+              type: "Overall Healthcare",
+              y: 48.9
+            },
+            {
+              sex: "Women",
+              variable: "hospitals.2005",
+              value: 53.1,
+              category: "2005",
+              type: "Hospitals",
+              y: 53.1
+            },
+            {
+              sex: "Women",
+              variable: "hospitals.2015",
+              value: 49.4,
+              category: "2015",
+              type: "Hospitals",
+              y: 49.4
+            },
+            {
+              sex: "Women",
+              variable: "outpatient.care.center.2005",
+              value: 54.1,
+              category: "2005",
+              type: "Outpatient Care Center",
+              y: 54.1
+            },
+            {
+              sex: "Women",
+              variable: "outpatient.care.center.2015",
+              value: 49.4,
+              category: "2015",
+              type: "Outpatient Care Center",
+              y: 49.4
+            }
+          ],
+          type: "column",
+          name: "White",
+          stack: 0
+        }
+      ],
+      subtitle: {
+        text: "<em>Women By Race/Ethnicity, 2005 and 2015<\/em>",
+        align: "left",
+        style: {
+          color: "#000000",
+          useHTML: true
+        }
+      },
+      colors: ["#1F497D", "#C5D9F1", "#538DD5", "#C4BD97", "#948A54"],
+      legend: {
+        margin: 2
+      }    
+});
+
+/* EDUCATION */
+
+Highcharts.chart('education-shares-all-industries', {
+      title: {
+        text: "Change in Education Shares of Full-Time, Full-Year Healthcare Workers",
+        margin: 20,
+        align: "left",
+        style: {
+          color: "#000000",
+          useHTML: true
+        }
+      },
+      yAxis: {
+        title: {
+          text: null
+        },
+        labels: {
+          format: "{value}%"
+        }
+      },
+      credits: {
+        enabled: true,
+        text: "Source and notes: CEPR analysis of the ACS.",
+        position: {
+          align: "left",
+          x: 10
+        },
+        style: {
+          fontSize: 12
+        }
+      },
+      exporting: {
+        enabled: false
+      },
+      plotOptions: {
+        series: {
+          turboThreshold: 0
+        },
+        treemap: {
+          layoutAlgorithm: "squarified"
+        },
+        bubble: {
+          minSize: 5,
+          maxSize: 25
+        }
+      },
+      annotationsOptions: {
+        enabledButtons: false
+      },
+      tooltip: {
+        delayForDisplay: 10,
+        pointFormat: "<span style=\"color:{point.color}\">●<\/span> {series.name}: <b>{point.y:,.2f}% change<\/b><br/>2005: <b>{point.y2005}%<\/b><br/>2015: <b>{point.y2015}%<\/b>"
+      },
+      xAxis: {
+        categories: [
+          {
+            name: "Overall Healthcare",
+            categories: ["Medical Technicians", "Health Aides and Assistants"]
+          },
+          {
+            name: "Hospitals",
+            categories: ["Medical Technicians", "Health Aides and Assistants"]
+          },
+          {
+            name: "Outpatient Care Centers",
+            categories: ["Medical Technicians", "Health Aides and Assistants"]
+          }
+        ],
+        labels: {
+          align: "center",
+          x: -2,
+          autoRotation: 0,
+          style: {
+            fontSize: "9px"
+          }
+        }
+      },
+      series: [
+        {
+          group: "High School Degree or Less",
+          data: [
+            {
+              category: "Overall Healthcare",
+              profession: "Medical Technicians",
+              value: -15.7068,
+              y2005: 19.1,
+              y2015: 16.1,
+              y: -15.7068
+            },
+            {
+              category: "Overall Healthcare",
+              profession: "Health Aides and Assistants",
+              value: -23.9604,
+              y2005: 50.5,
+              y2015: 38.4,
+              y: -23.9604
+            },
+            {
+              category: "Hospitals",
+              profession: "Medical Technicians",
+              value: -22.7027,
+              y2005: 18.5,
+              y2015: 14.3,
+              y: -22.7027
+            },
+            {
+              category: "Hospitals",
+              profession: "Health Aides and Assistants",
+              value: -28.9855,
+              y2005: 41.4,
+              y2015: 29.4,
+              y: -28.9855
+            },
+            {
+              category: "Outpatient Care Center",
+              profession: "Medical Technicians",
+              value: -6.9519,
+              y2005: 18.7,
+              y2015: 17.4,
+              y: -6.9519
+            },
+            {
+              category: "Outpatient Care Center",
+              profession: "Health Aides and Assistants",
+              value: -29.5385,
+              y2005: 32.5,
+              y2015: 22.9,
+              y: -29.5385
+            }
+          ],
+          type: "column",
+          name: "High School Degree or Less"
+        },
+        {
+          group: "Bachelor's Degree or More",
+          data: [
+            {
+              category: "Overall Healthcare",
+              profession: "Medical Technicians",
+              value: 5.2632,
+              y2005: 20.9,
+              y2015: 22,
+              y: 5.2632
+            },
+            {
+              category: "Overall Healthcare",
+              profession: "Health Aides and Assistants",
+              value: 38.1579,
+              y2005: 7.6,
+              y2015: 10.5,
+              y: 38.1579
+            },
+            {
+              category: "Hospitals",
+              profession: "Medical Technicians",
+              value: 11.7647,
+              y2005: 23.8,
+              y2015: 26.6,
+              y: 11.7647
+            },
+            {
+              category: "Hospitals",
+              profession: "Health Aides and Assistants",
+              value: 36.8932,
+              y2005: 10.3,
+              y2015: 14.1,
+              y: 36.8932
+            },
+            {
+              category: "Outpatient Care Center",
+              profession: "Medical Technicians",
+              value: 12.963,
+              y2005: 16.2,
+              y2015: 18.3,
+              y: 12.963
+            },
+            {
+              category: "Outpatient Care Center",
+              profession: "Health Aides and Assistants",
+              value: 43.9024,
+              y2005: 12.3,
+              y2015: 17.7,
+              y: 43.9024
+            }
+          ],
+          type: "column",
+          name: "Bachelor's Degree or More"
+        }
+      ],
+      subtitle: {
+        text: "<em>By Occupation, 2005 to 2015<\/em>",
+        align: "left",
+        style: {
+          color: "#000000",
+          useHTML: true
+        }
+      },
+      colors: ["#1F497D", "#C5D9F1", "#538DD5", "#C4BD97", "#948A54"],
+      legend: {
+        margin: 3
+      }    
 });

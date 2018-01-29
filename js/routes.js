@@ -21,45 +21,45 @@ var AppRouter = new (Backbone.Router.extend({
             else if (viewid == 'employment') {
                 this.employment();
             }
-            else if (viewid == 'workers') {
-                this.workers();
+            else if (viewid == 'education') {
+                this.education();
             }
     },       
 
     index:function (){
         $('#wages').hide();
-        $('#workers').hide();
+        $('#education').hide();
         $('#employment').hide();
     },
 
     wages:function() {
         $('#employment').hide();
-        $('#workers').hide();
+        $('#education').hide();
        
         $('#wages').fadeIn();
         $("ul#topics").append($("ul#topics li:textEquals('Wages')"));
-        $("ul#topics li:lt(1) a").css("color","#CCCCCC");
-        $("ul#topics li:eq(1) a").css("color","#23527c");        
+        $("ul#topics li:lt(2) a").css("color","#CCCCCC");
+        $("ul#topics li:eq(2) a").css("color","#23527c");        
     },
     
     employment:function() {
         $('#wages').hide();
-        $('#workers').hide();
+        $('#education').hide();
         
         $('#employment').fadeIn();
         $("ul#topics").append($("ul#topics li:textEquals('Employment')"));
-        $("ul#topics li:lt(1) a").css("color","#CCCCCC");
-        $("ul#topics li:eq(1) a").css("color","#23527c");         
+        $("ul#topics li:lt(2) a").css("color","#CCCCCC");
+        $("ul#topics li:eq(2) a").css("color","#23527c");         
     },
     
-    workers:function() {
+    education:function() {
         $('#wages').hide();
         $('#employment').hide();
         
-        $('#workers').fadeIn();
-        $("ul#topics").append($("ul#topics li:textEquals('Workers')"));
-        $("ul#topics li:lt(1) a").css("color","#CCCCCC");
-        $("ul#topics li:eq(1) a").css("color","#23527c");         
+        $('#education').fadeIn();
+        $("ul#topics").append($("ul#topics li:textEquals('Education')"));
+        $("ul#topics li:lt(2) a").css("color","#CCCCCC");
+        $("ul#topics li:eq(2) a").css("color","#23527c");         
         
     }
 

@@ -26,7 +26,7 @@ let WageCollectionView = Backbone.View.extend({
     }
 });
 
-let WorkerCollectionView = Backbone.View.extend({
+let EdCollectionView = Backbone.View.extend({
     initialize: function () {
         this.render();
     },
@@ -37,7 +37,7 @@ let WorkerCollectionView = Backbone.View.extend({
         var moduleView = new ModuleView({
             model: module
         });
-        $("#workers").append(moduleView.el)
+        $("#education").append(moduleView.el)
     }
 });
 
@@ -61,8 +61,8 @@ let wageSectionsView = new WageCollectionView({
 	collection: wageSections
 });
 
-let workerSectionsView = new WorkerCollectionView({
-	collection: workerSections
+let edSectionsView = new EdCollectionView({
+	collection: edSections
 });
 
 let employmentSectionsView = new EmploymentCollectionView({
