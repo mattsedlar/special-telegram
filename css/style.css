@@ -86,6 +86,10 @@ footer {
   height: 420px; }
   .articles #image {
     background: url("../images/nurse.jpg") no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-right: 20px solid #FFF;
+    border-left: 12px solid #FFF;
     height: 100%; }
 
 .article {
