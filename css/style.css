@@ -6,32 +6,32 @@ html {
 
 body {
   font: 100% "Open Sans", sans-serif;
-  line-height: 1.423828125em;
+  line-height: 1.42383em;
   color: #444; }
 
 h1, h2, h3, h4 {
   font-family: "Playfair Display", serif; }
 
 h1 {
-  font-size: 2.0272865295em; }
+  font-size: 2.02729em; }
 
 h2 {
-  font-size: 1.8020324707em; }
+  font-size: 1.80203em; }
 
 h3 {
-  font-size: 1.6018066406em;
-  line-height: 1.265625em; }
+  font-size: 1.60181em;
+  line-height: 1.26563em; }
 
 h4 {
-  font-size: 1.423828125em;
-  line-height: 1.265625em; }
+  font-size: 1.42383em;
+  line-height: 1.26563em; }
 
 header {
   background-color: #444;
   color: #FFFFFF;
   padding: 12px; }
   header h1 {
-    font-size: 2.565784514em;
+    font-size: 2.56578em;
     margin: 0; }
   header img {
     padding-left: 12px;
@@ -84,8 +84,9 @@ footer {
 /* ARTICLE STYLES */
 .articles {
   height: 420px; }
-  .articles img {
-    overflow: hidden; }
+  .articles #image {
+    background: url("../images/nurse.jpg") no-repeat;
+    height: 100%; }
 
 .article {
   height: 100%;
@@ -111,7 +112,12 @@ footer {
 /* MEDIA QUERIES */
 @media screen and (max-width: 991px) {
   #doctors {
-    display: none; } }
+    display: none; }
+
+  .articles {
+    height: auto; }
+    .articles .article {
+      padding-bottom: 24px; } }
 @media screen and (max-width: 360px) {
   header {
     text-align: center; }
@@ -119,6 +125,11 @@ footer {
       padding-bottom: 6px;
       float: none; }
     header h1 {
-      font-size: 1.423828125em; } }
+      font-size: 1.42383em; }
+
+  .articles {
+    height: auto; }
+    .articles .article {
+      padding-bottom: 24px; } }
 
 /*# sourceMappingURL=style.css.map */
